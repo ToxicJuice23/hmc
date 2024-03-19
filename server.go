@@ -1,5 +1,3 @@
-// TODO PUSH TO PROD!!!!
-
 package main
 
 import (
