@@ -23,7 +23,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Printf("Dialing: %s...", os.Args[1])
+	fmt.Printf("Dialing: %s...\n", os.Args[1])
 
 	conn.Write([]byte("client"))
 	n, err := conn.Read(make([]byte, 100))
@@ -66,6 +66,6 @@ func main() {
 			fmt.Fprintf(os.Stderr, "Error on write().\n")
 			os.Exit(1)
 		}
-		time.Sleep(time.Millisecond * 100)
+		time.Sleep(time.Millisecond * 200)
 	}
 }
