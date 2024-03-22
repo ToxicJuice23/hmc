@@ -23,7 +23,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println("Dialing: 127.0.0.1:8080...")
+	fmt.Printf("Dialing: %s...", os.Args[1])
 
 	conn.Write([]byte("client"))
 	n, err := conn.Read(make([]byte, 100))
